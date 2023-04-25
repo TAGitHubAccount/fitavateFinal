@@ -5,8 +5,8 @@
     $userID = $_SESSION['user_id'];
     $userImage = $_SESSION['userImage'];
     $userDisplayName = $_SESSION['userDisplayName'];
-    $fitavationArray = getOtherFitavations($userID);
-    $followCheck = createCompareFollowingCheckList($userID);
+   // $fitavationArray = getOtherFitavations($userID);
+    //$followCheck = createCompareFollowingCheckList($userID);
     
     //followers
 if (isset($_POST['viewProfile'])) {
@@ -17,19 +17,19 @@ if (isset($_POST['viewProfile'])) {
 
 if (isset($_POST['unfollowUser'])) {
     $userToUnfollow = $_POST['saveSecUserID'];
-    unfollowUser($userID, $userToUnfollow);
+  //  unfollowUser($userID, $userToUnfollow);
     header("Refresh:0");
 }
 
 if (isset($_POST['followUser'])) {
     $userToFollow = $_POST['saveSecUserID'];
-    followUser($userID, $userToFollow);
+   // followUser($userID, $userToFollow);
     header("Refresh:0");
 }
 
 if (isset($_POST['submitFitavation'])) {
     $fitavationUserID = $_POST['fitavationUserID'];
     $fitavationText = $_POST['fitavationText'];
-    postFitavation($userID, $fitavationText);
+    //postFitavation($userID, $fitavationText);
     header("Refresh:0");
 }
