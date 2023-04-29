@@ -24,15 +24,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($followerList as $key => $followerList):?>
-                        <tr>
-                            <td><?php echo $arrayUserId['following_id']?></td>
-                            <td><?php echo $arrayUserName['userDisplayName']?></td>
-                           
-                        </tr>
-                        
-                        <?php endforeach;?>
-                       
+                    <?php
+                        include('model/followers.php');
+                        while ($follower = $followersData->fetch_assoc())
+                        {
+                            ?> 
+                                <tr>
+                                    
+                                    <td><?php echo $follower['user_id']; ?></td>
+                                    <td><?php echo $follower['userDisplayName']; ?></td> 
+                                    
+                                </tr> 
+                                <?php 
+                            
+                        }
+                    ?>
                     </tbody>
                 </table>
             </div>

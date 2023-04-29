@@ -1,5 +1,7 @@
 <?php
 
+include_once 'error_handler.php';
+
 //sets application path
 defined('APPLICATION_PATH') || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../app'));
 //defines /
@@ -29,3 +31,7 @@ if (file_exists($view)) {
 }
 
 include $template;
+
+
+
+
