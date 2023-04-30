@@ -1,3 +1,7 @@
+<!---Author: Tram-Anh Ngo
+     Date: 3/10/2023
+     Course: CSC 450 Computer Science Captone
+     This "followers" file in view displays a list of people who followed the profile user-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +18,7 @@
 <body>
 <div class="container">
             <div id="container">
-                <h1>Follower!</h1>
+                <h1><font color=blue>Follower!</font></h1>
                 <table class="table">
                     <thead>
                         <tr>

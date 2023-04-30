@@ -1,3 +1,7 @@
+<!---Author: Tram-Anh Ngo
+     Date: 3/10/2023
+     Course: CSC 450 Computer Science Captone
+     This "following" file in model -->
 
 <?php
 session_start(); // start session (assuming using session to store user data)
@@ -22,7 +26,7 @@ $user_id  = $_SESSION['user_id'];
 $addFollowMessage = '';
 
   // check if user clicked the "follow" link
-  //function callFollow($user_id){
+ 
   if (isset($_GET['follow'])) {
    
     $follower_id = $_GET['follow']; // get follower ID from URL parameter
@@ -35,13 +39,18 @@ $addFollowMessage = '';
         // insert new follower into database
         $insert_follower = "INSERT INTO follow (user_id, following_id) VALUES ($user_id, $follower_id)";
         $conn->query($insert_follower);
-        $addFollowMessage = 'Not followed yet';
+       
+        $message1 ='Just followed person has ID number ';
+       
+        $addFollowMessage = $message1 . '  ' . $follower_id;
     }else{
-        $addFollowMessage = 'Already followed';
+        $message2= 'Already followed person has ID number ';
+        
+        $addFollowMessage = $message2 . '  ' . $follower_id;
+        echo $addFollowMessage;
     }
   }
-  //}
-
+ 
 ?>
 
 
